@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 // http://recipes4dev.tistory.com/43
 
-public class ListViewAdapter extends BaseAdapter {
+public class ArrivedInfoListAdapter extends BaseAdapter {
 
     private ArrayList<ListViewItem> listViewItems = new ArrayList<ListViewItem>();
 
@@ -31,7 +31,6 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final int pos = position;
         final Context context = parent.getContext();
 
         if (convertView == null) {

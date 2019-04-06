@@ -1,11 +1,8 @@
 package com.example.dell.bus_parse_project;
 
-import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -19,7 +16,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -30,12 +26,10 @@ import com.example.dell.bus_parse_project.Adapter.LocationAdapter;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 public class CurrentLocation extends AppCompatActivity {
 
@@ -131,67 +125,10 @@ public class CurrentLocation extends AppCompatActivity {
             txtResult.setText("GPS를 사용할 수 없습니다. 다시 시도해주세요.");
         }
 
-//        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100, 1, mLocationListener);
-//        manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 100, 1, mLocationListener);
-
-        //manager.removeUpdates(mLocationListener);
-
-
-
-//        refreshButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                adapter.getLocationViewItems().clear();
-//                arsIdList.clear();
-//
-//                if (Build.VERSION.SDK_INT >= 23 &&
-//                        ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//                    ActivityCompat.requestPermissions(CurrentLocation.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
-//                            0);
-//                } else {
-//                    Location location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//
-//                    if (location.getProvider() == null) {
-//                        txtResult.setText("GPS를 사용할 수 없습니다. 다른 곳에서 다시 시도해주세요");
-//                    } else {
-//
-//                        getStationInfo(longitude, latitude);
-//                        for (int i = 0; i < arsIdList.size(); i++) {
-//                            getRouteId(arsIdList.get(i));
-//                            adapter.addItem(stationNmList.get(i), arsIdList.get(i),
-//                                    gpsXList.get(i), gpsYList.get(i),
-//                                    busRouteNm.toArray(new String[busRouteNm.size()]));
-//                        }
-//                        //txtResult.setText(arsId+" "+gpsX+" "+gpsY);
-//                        listView.setAdapter(adapter);
-//                        handler = new Handler();
-//                        runOnUiThread(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                progressDialog = progressDialog.show(CurrentLocation.this, "", "잠시만 기다려주세요", true);
-//                                handler.postDelayed(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        try {
-//                                            if (progressDialog != null && progressDialog.isShowing()) {
-//                                                progressDialog.dismiss();
-//                                            }
-//                                        } catch (Exception e) {
-//                                            e.printStackTrace();
-//                                        }
-//                                    }
-//                                }, 5000);
-//                            }
-//                        });
-//                    }
-//                }
-//            }
-//        });
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), Search_Event.class);
+                Intent intent = new Intent(getApplicationContext(), SearchResult.class);
                 getRouteId(arsIdList.get(position));
                 intent.putExtra("arsId", arsIdList.get(position));
                 intent.putExtra("stId", stationIdList.get(position));
@@ -359,8 +296,6 @@ public class CurrentLocation extends AppCompatActivity {
             //Gps 위치제공자에 의한 위치변화. 오차범위가 좁다.
             //Network 위치제공자에 의한 위치변화
             //Network 위치는 Gps에 비해 정확도가 많이 떨어진다.
-            Log.d("aaa", "위치정보 : " + provider + "\n위도 : " + longitude + "\n경도 : " + latitude
-                    + "\n고도 : " + altitude + "\n정확도 : " + accuracy);
 
 
         }

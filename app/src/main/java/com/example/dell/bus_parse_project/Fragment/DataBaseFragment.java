@@ -12,8 +12,6 @@ import com.example.dell.bus_parse_project.R;
 import com.example.dell.bus_parse_project.XmlParser;
 
 public class DataBaseFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
     private String stId;
     private String[] busRouteIdArray, ordArray;
@@ -21,7 +19,6 @@ public class DataBaseFragment extends Fragment {
     XmlParser parser = new XmlParser();
 
     public DataBaseFragment() {
-        // Required empty public constructor
     }
 
     public static DataBaseFragment newInstance(String stId, String[] busRouteIdArray, String[] ordArray) {

@@ -1,12 +1,8 @@
 package com.example.dell.bus_parse_project;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.media.Image;
 import android.os.Handler;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,10 +14,6 @@ import android.widget.TextView;
 
 import com.example.dell.bus_parse_project.Adapter.SearchAdapter;
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import java.net.URL;
 import java.util.ArrayList;
 
 public class Search extends AppCompatActivity {
@@ -79,12 +71,11 @@ public class Search extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), Search_Event.class);
+                Intent intent = new Intent(getApplicationContext(), SearchResult.class);
                 parser.getRouteId(arsIdList.get(position),busRouteNmList, busRouteIdList);
                 intent.putExtra("arsId", arsIdList.get(position));
                 intent.putExtra("stId", stIdList.get(position));
                 intent.putExtra("busRouteId", busRouteIdList.toArray(new String[busRouteIdList.size()]));
-
 
                 startActivity(intent);
 

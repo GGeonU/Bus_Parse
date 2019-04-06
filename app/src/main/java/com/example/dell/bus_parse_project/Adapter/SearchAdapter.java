@@ -92,17 +92,9 @@ public class SearchAdapter extends BaseAdapter {
             buffer.append(searchViewItem.getBusRouteId()[i] + " ");
         }
         arrivedBus.setText("정차 버스: " + buffer);
-        // = station_id.setText(searchViewItems.get(position).getId());
         return convertView;
     }
 
-    /*ImageButton.OnClickListener mOnClickListener = new ImageButton.OnClickListener(){
-        @Override
-        public void onClick(View v) {
-            int pos = Integer.parseInt(v.getTag().toString());
-
-        }
-    };*/
 
 
     public void addItem(String name, String id, String arsId, String[] busRouteNm, String tmX, String tmY) {

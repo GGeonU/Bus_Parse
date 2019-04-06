@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Search_Event extends AppCompatActivity {
+public class SearchResult extends AppCompatActivity {
 
     private XmlParser parser = new XmlParser();
 
@@ -38,7 +38,7 @@ public class Search_Event extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search__event);
+        setContentView(R.layout.activity_search_result);
 
         listView = (ListView) findViewById(R.id.arrived_info);
         swipe = (SwipeRefreshLayout) findViewById(R.id.swipe_layout);
@@ -68,7 +68,7 @@ public class Search_Event extends AppCompatActivity {
                 stationInfo.setText(parser.getStationInfo());
                 setTime.setText(parser.getSetTime());
                 swipe.setRefreshing(false);
-                Toast.makeText(Search_Event.this, "갱신되었습니다", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SearchResult.this, "갱신되었습니다", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -80,7 +80,7 @@ public class Search_Event extends AppCompatActivity {
                 stationInfo.setText(parser.getStationInfo());
                 setTime.setText(parser.getSetTime());
                 swipe.setRefreshing(false);
-                Toast.makeText(Search_Event.this, "갱신되었습니다", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SearchResult.this, "갱신되었습니다", Toast.LENGTH_SHORT).show();
             }
         });
 

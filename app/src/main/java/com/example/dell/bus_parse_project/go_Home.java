@@ -33,7 +33,7 @@ public class go_Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_go__home);
+        setContentView(R.layout.activity_go);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager());

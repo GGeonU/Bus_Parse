@@ -3,19 +3,17 @@ package com.example.dell.bus_parse_project;
 import android.os.StrictMode;
 import android.util.Log;
 
-import com.example.dell.bus_parse_project.Adapter.ListViewAdapter;
+import com.example.dell.bus_parse_project.Adapter.ArrivedInfoListAdapter;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class XmlParser {
 
-    public ListViewAdapter adapter = new ListViewAdapter();
+    public ArrivedInfoListAdapter adapter = new ArrivedInfoListAdapter();
 
     private String key = "2ysbgQFrENYJHhR8eRUwPTG6A19dAGm%2BqRXK%2FRaKcaC4Ml%2FHvbpa2i7N3dwrkhnkJD2iQbSPNbBLZyVFq5tBBw%3D%3D";
     private String getArrInfoUrl = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRoute?ServiceKey=";

@@ -46,7 +46,7 @@ public class LocationAdapter extends BaseAdapter {
 
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.locationview_item, parent, false);
+            convertView = inflater.inflate(R.layout.searchview_item, parent, false);
         }
 
         TextView stationName = (TextView) convertView.findViewById(R.id.station_name);

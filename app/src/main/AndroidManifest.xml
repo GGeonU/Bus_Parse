@@ -26,10 +26,9 @@
         <activity android:name=".go_Hwagok" />
         <activity android:name=".go_Home" />
         <activity android:name=".Search" />
-        <activity android:name=".Search_Event" />
+        <activity android:name=".SearchResult" />
         <activity android:name=".ShowMapView" />
         <activity android:name=".CurrentLocation" />
-        <activity android:name=".ShowDatabase"></activity>
     </application>
 
 </manifest>
