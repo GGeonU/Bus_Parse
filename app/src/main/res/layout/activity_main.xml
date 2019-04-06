@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/go_Hwagok"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_bus_black" />
+
+
+        <ImageButton
+            android:id="@+id/go_Home"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_home" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_search" />
+
+        <ImageButton
+            android:id="@+id/currentLocation"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_gps_fixed_indicator" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
